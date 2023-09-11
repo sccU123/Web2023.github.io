@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas y formularios</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Clase de tablas y formularios</h1>
+    <h2>TABLA</h2>
+    <table>
+      <tr>
+        <th class="columna1">Ciudad</th>
+        <th class="columna2">Fecha</th>
+        <th id="clave">Temperatura</th>
+        <th>Población</th>
+        <th>Ranking</th>
+      </tr>
+      <tr>
+        <td>Envigado</td>
+        <td>01/08/2023</td>
+        <td>24</td>
+        <td>200</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Bello</td>
+        <td>01/07/2023</td>
+        <td>26</td>
+        <td>150</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Itagui</td>
+        <td>01/06/2023</td>
+        <td>23</td>
+        <td>250</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Belen</td>
+        <td>01/05/2023</td>
+        <td>27</td>
+        <td>300</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td class="alerta">Estrella</td>
+        <td>01/04/2023</td>
+        <td>28</td>
+        <td class="alerta">350</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td class="alerta">Medellin</td>
+        <td>01/03/2023</td>
+        <td>29</td>
+        <td class="alerta">400</td>
+        <td>1</td>
+      </tr>
+    </table>
+    <section class="fila">
+      <article class="caja color1"><p>1</p></article>
+      <article class="caja color2"><p>2</p></article>
+      <article class="caja color3"><p>3</p></article>
+      <article class="caja color4"><p>4</p></article>
+    </section>
+    <hr />
+    <h2>FORMULARIO</h2>
+    <form action="">
+      <label for="nombre">Nombre</label>
+      <input name="nombre" id="nombre" type="text" />
+      <br />
+      <label for="apellidos">Apellido</label>
+      <input name="apellidos" id="apellidos" type="text" />
+      <br>
+      <div>
+      <label for="masculino">Masculino</label>
+      <input name="sexo" id="masculino" type="radio" />
+    </div>
+    <div>
+      <label for="femenino">Femenino</label>
+      <input name="sexo" id="femenino" type="radio" />
+    </div>
+    <div>
+        <input type="reset" name="borrar" id="borrar">
+        <input type="submit">
+
+    </div>
+    </form>
+  </body>
+</html>
