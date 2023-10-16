@@ -72,3 +72,40 @@ margin-left: 20px;
     color: #fff;
     background-color: rgba(255, 0, 0, 0.5); /* Fondo rojo semitransparente */
   }
+
+  @media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        padding: 20px; /* Reducir el relleno para una mejor vista en dispositivos móviles */
+    }
+
+    header {
+        padding: 20px; /* Reducir el relleno para una mejor vista en dispositivos móviles */
+    }
+
+    header .contenido {
+        flex-direction: column; /* Apilar los elementos en el encabezado */
+        align-items: center;
+    }
+
+    .img1 {
+        margin: 10px 0; /* Alinear la imagen en el centro */
+    }
+
+    .boton {
+        margin-top: 20px; /* Agregar espacio entre el botón y el texto */
+    }
+
+    .fondo {
+        background-size: cover;
+        background-position: center;
+        min-height: 60vh; /* Ajustar la altura de la imagen de fondo */
+    }
+
+    .columna-izquierda,
+    .columna-derecha {
+        background-color: transparent; /* Eliminar el fondo semitransparente */
+        padding: 10px; /* Reducir el relleno */
+        text-align: center; /* Centrar el texto */
+    }
+}
