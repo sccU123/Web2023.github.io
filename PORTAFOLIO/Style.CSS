@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3366cc;
+    --text-color: #727171;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos comunes */
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.description {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* Layouts */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+/* Profile */
+.profile {
+    margin-bottom: 2rem;
+}
+
+.profile_container {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile_profileImg img {
+    max-width: 250px;
+}
+
+.profile_name_firstname {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: -0.6rem;
+    display: block;
+}
+
+.profile_name_lastname {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.profile_title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Conocimientos técnicos */
+.conocimientos_tecnicos_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.estudios_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.edu_list {
+    margin-top: 1rem;
+}
