@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .producto {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .producto p {
+            margin: 10px 0;
+        }
+
+        .producto button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .producto button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catálogo de Productos</h1>
+
+    <div class="producto">
+        <h2>Producto 1</h2>
+        <p>Detalle del Producto 1</p>
+        <p>Valor de Venta: $10.00</p>
+        <button onclick="agregarAlCarrito('Producto 1', 10.00)">Agregar al Carrito</button>
+    </div>
+
+    <div class="producto">
+        <h2>Producto 2</h2>
+        <p>Detalle del Producto 2</p>
+        <p>Valor de Venta: $15.00</p>
+        <button onclick="agregarAlCarrito('Producto 2', 15.00)">Agregar al Carrito</button>
+    </div>
+
+    <a href="carrito.html">Ir al Carrito de Compras</a>
+
+    <script>
+        function agregarAlCarrito(nombre, precio) {
+            var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            carrito.push({ nombre, precio });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+    </script>
+</body>
+</html>

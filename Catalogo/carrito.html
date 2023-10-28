@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .producto {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .producto p {
+            margin: 10px 0;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+
+    <div class="producto">
+        <h2>Productos en el Carrito</h2>
+        <div id="carrito-items">
+            <!-- Los productos del carrito se mostrarán aquí -->
+        </div>
+    </div>
+
+    <a href="catalogo.html">Volver al Catálogo</a>
+
+    <script>
+        function mostrarCarrito() {
+            var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            var carritoItems = document.getElementById('carrito-items');
+            carritoItems.innerHTML = '';
+
+            carrito.forEach(function (item) {
+                var productoDiv = document.createElement('div');
+                productoDiv.classList.add('producto');
+                productoDiv.innerHTML = `
+                    <h2>${item.nombre}</h2>
+                    <p>Precio: $${item.precio}</p>
+                `;
+                carritoItems.appendChild(productoDiv);
+            });
+        }
+
+        mostrarCarrito();
+    </script>
+</body>
+</html>
